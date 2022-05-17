@@ -13,33 +13,33 @@ const Navbar = () => {
   return (
     <ul>
       <li>
-        <a href="/">
-          <div className="name">Home</div>
+        <a href="/" className="wrapper">
           <AiOutlineHome className="icon" />
+          <div className="name">Home</div>
         </a>
       </li>
       <li>
-        <a href="#about">
-          <div className="name">About</div>
+        <a href="#about" className="wrapper">
           <AiOutlineUser className="icon" />
+          <div className="name">About</div>
         </a>
       </li>
       <li>
-        <a href="#resume">
-          <div className="name">Resume</div>
+        <a href="#resume" className="wrapper">
           <AiOutlineFileText className="icon" />
+          <div className="name">Resume</div>
         </a>
       </li>
       <li>
-        <a href="#projects">
-          <div className="name">Projects</div>
+        <a href="#projects" className="wrapper">
           <FiServer className="icon" />
+          <div className="name">Projects</div>
         </a>
       </li>
       <li>
-        <a href="#contact">
-          <div className="name">Contact</div>
+        <a href="#contact" className="wrapper">
           <AiOutlineMail className="icon" />
+          <div className="name">Contact</div>
         </a>
       </li>
     </ul>

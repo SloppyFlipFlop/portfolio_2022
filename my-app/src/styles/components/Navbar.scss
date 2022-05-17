@@ -1,3 +1,5 @@
+@use "./../util/colors.scss" as *;
+
 ul {
   list-style: none;
   display: flex;
@@ -10,13 +12,12 @@ ul {
   min-width: fit-content;
   width: 15vw;
   z-index: 1;
-  margin: 0;
-  margin-left: 2.5rem;
 
   li {
     min-width: fit-content;
-    width: 100px;
-    margin: 1rem 0;
+    width: 20px;
+    margin: 0.5rem 0;
+    margin-left: 1rem;
 
     a {
       display: flex;
@@ -25,6 +26,47 @@ ul {
       justify-content: space-evenly;
       min-width: fit-content;
       height: 2rem;
+      width: 2rem;
+      border-radius: 2rem;
+      padding: 0.5rem;
+      background: $white;
+      text-decoration: none;
+
+      .icon {
+        font-size: 20px;
+        color: $black;
+      }
+      .name {
+        font-size: 20px;
+        color: $white;
+        line-height: 2rem;
+      }
+    }
+  }
+}
+
+.wrapper {
+  transition: background 0.5s;
+  transition: width 0.25s;
+  .name {
+    display: none;
+    transition: display 1s;
+  }
+
+  &:hover {
+    min-width: fit-content;
+    width: 7rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: row;
+    background: $blue;
+    .name {
+      display: block;
+    }
+    .icon {
+      color: $white;
     }
   }
 }
