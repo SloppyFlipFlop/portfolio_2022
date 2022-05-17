@@ -1,4 +1,5 @@
 // put scss import here
+import "./styles/globals.scss";
 
 import Home from "./pages/Home";
 

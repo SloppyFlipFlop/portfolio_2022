@@ -1,5 +1,13 @@
-import React from 'react'
-import {AiOutlineHome} from 'react-icons/ai'
+import React from "react";
+import "./../styles/components/Navbar.scss";
+import {
+  AiOutlineHome,
+  AiOutlineUser,
+  AiOutlineFileText,
+  AiOutlineMail,
+} from "react-icons/ai";
+
+import { FiServer } from "react-icons/fi";
 
 const Navbar = () => {
   return (
@@ -11,16 +19,31 @@ const Navbar = () => {
         </a>
       </li>
       <li>
-        <a href="/">
+        <a href="#about">
           <div className="name">About</div>
-          <AiOutlineHome className="icon" />
+          <AiOutlineUser className="icon" />
         </a>
       </li>
-      <li>Resume</li>
-      <li>Projects</li>
-      <li>Contact</li>
+      <li>
+        <a href="#resume">
+          <div className="name">Resume</div>
+          <AiOutlineFileText className="icon" />
+        </a>
+      </li>
+      <li>
+        <a href="#projects">
+          <div className="name">Projects</div>
+          <FiServer className="icon" />
+        </a>
+      </li>
+      <li>
+        <a href="#contact">
+          <div className="name">Contact</div>
+          <AiOutlineMail className="icon" />
+        </a>
+      </li>
     </ul>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
