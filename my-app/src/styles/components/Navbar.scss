@@ -1,72 +1,114 @@
 @use "./../util/colors.scss" as *;
 
-ul {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  align-content: center;
-  height: 100vh;
-  overflow-y: hidden;
-  min-width: fit-content;
-  width: 15vw;
-  z-index: 1;
+// modile navbar
 
-  li {
-    min-width: fit-content;
-    width: 20px;
-    margin: 0.5rem 0;
-    margin-left: 1rem;
+@media screen and (max-width: 768px) {
+  .menu_icons {
+    // makes the hamburger menu visible on mobile
+    display: block;
+    // hamburger position
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    // hamburger size
+    font-size: 28px;
 
-    a {
-      display: flex;
-      flex-wrap: nowrap;
-      align-items: center;
-      justify-content: space-evenly;
-      min-width: fit-content;
-      height: 2rem;
-      width: 2rem;
-      border-radius: 2rem;
+    z-index: 1;
+    transition: 1.5s;
+    * {
       padding: 0.5rem;
-      background: $white;
-      text-decoration: none;
-
-      .icon {
-        font-size: 20px;
-        color: $black;
-      }
-      .name {
-        font-size: 20px;
-        color: $white;
-        line-height: 2rem;
-      }
     }
+    .close {
+      background: $blue;
+      // make icon into a circle
+      border-radius: 50%;
+      color: $white;
+    }
+  }
+
+  ul {
+    width: 65vw;
+    height: 100vh;
+    border-right: 1px solid #e6e9ec;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   }
 }
 
-.wrapper {
-  transition: background 0.5s;
-  transition: width 0.25s;
-  .name {
+//desktop navbar
+
+@media screen and (min-width: 900px) {
+  .menu_icons {
     display: none;
-    transition: display 1s;
   }
 
-  &:hover {
-    min-width: fit-content;
-    width: 7rem;
-    height: 2rem;
+  ul {
+    list-style: none;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
     align-content: center;
-    flex-direction: row;
-    background: $blue;
-    .name {
-      display: block;
+    height: 100vh;
+    overflow-y: hidden;
+    min-width: fit-content;
+    width: 15vw;
+    z-index: 1;
+
+    li {
+      min-width: fit-content;
+      width: 20px;
+      margin: 0.5rem 0;
+      margin-left: 1rem;
+
+      a {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-evenly;
+        min-width: fit-content;
+        height: 2rem;
+        width: 2rem;
+        border-radius: 2rem;
+        padding: 0.5rem;
+        background: $white;
+        text-decoration: none;
+
+        .icon {
+          font-size: 20px;
+          color: $black;
+        }
+        .name {
+          font-size: 20px;
+          color: $white;
+          line-height: 2rem;
+        }
+      }
     }
-    .icon {
-      color: $white;
+  }
+
+  .wrapper {
+    transition: background 0.5s;
+    transition: width 0.25s;
+    .name {
+      display: none;
+      transition: display 1s;
+    }
+
+    &:hover {
+      min-width: fit-content;
+      width: 7rem;
+      height: 2rem;
+      display: flex;
+      align-items: center;
+      align-content: center;
+      flex-direction: row;
+      background: $blue;
+      .name {
+        display: block;
+      }
+      .icon {
+        color: $white;
+      }
     }
   }
 }
