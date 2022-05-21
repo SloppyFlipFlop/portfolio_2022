@@ -26,6 +26,16 @@
     }
   }
 
+  .show {
+    transition: 1s;
+    transform: translateX(0);
+  }
+
+  .hide {
+    transition: 1s;
+    transform: translateX(-100%);
+  }
+
   ul {
     width: 65vw;
     height: 100vh;
@@ -39,6 +49,14 @@
 @media screen and (min-width: 900px) {
   .menu_icons {
     display: none;
+  }
+
+  .hide {
+    display: none;
+  }
+
+  .desktop {
+    display: flex;
   }
 
   ul {
@@ -88,10 +106,11 @@
 
   .wrapper {
     transition: background 0.5s;
-    transition: width 0.25s;
+    transition: width 1s;
     .name {
       display: none;
-      transition: display 1s;
+      // opacity: 0;
+      transition: opacity 1s;
     }
 
     &:hover {
@@ -104,6 +123,8 @@
       flex-direction: row;
       background: $blue;
       .name {
+        // transition: 1s;
+        // opacity: 1;
         display: block;
       }
       .icon {
