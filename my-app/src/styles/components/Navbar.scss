@@ -46,7 +46,7 @@
 
 //desktop navbar
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 768px) {
   .menu_icons {
     display: none;
   }
@@ -106,7 +106,7 @@
 
   .wrapper {
     transition: background 0.5s;
-    transition: width 1s;
+    transition: width 600ms;
     .name {
       display: none;
       // opacity: 0;
@@ -114,6 +114,7 @@
     }
 
     &:hover {
+      transition: 600ms;
       min-width: fit-content;
       width: 7rem;
       height: 2rem;
