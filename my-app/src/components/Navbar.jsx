@@ -16,7 +16,7 @@ const Navbar = () => {
   const [navbarOpened, setNavbarOpened] = useState(false);
 
   return (
-    <>
+    <div className="navbar-container">
       <div className="menu_icons">
         {navbarOpened ? (
           <AiOutlineClose
@@ -62,7 +62,7 @@ const Navbar = () => {
           </a>
         </li>
       </ul>
-    </>
+    </div>
   );
 };
 
