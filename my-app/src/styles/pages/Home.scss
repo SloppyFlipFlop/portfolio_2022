@@ -1,9 +1,20 @@
 @use "./../util/colors.scss" as *;
 
-.conatiner {
-  .section-wrapper {
-    // add animate to each section
-    height: 200px;
-    width: 100vw;
+
+// mobile
+@media screen and (max-width: 768px) {
+  .container {
+    
+    .section-wrapper {
+      // add animate to each section
+      img {
+        // make the image cover the entire screen
+        width: 100vw;
+        height: 100vh;
+        background: cover;
+        // opacity: .8;
+
+      }
+    }
   }
 }
