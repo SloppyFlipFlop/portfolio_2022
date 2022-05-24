@@ -32,7 +32,7 @@ const Navbar = () => {
       </div>
       <ul className={`desktop ${navbarOpened ? "show" : "hide"}`}>
         <li>
-          <a href="/" className="wrapper">
+          <a href="#home" className="wrapper">
             <AiOutlineHome className="icon" />
             <div className="name">Home</div>
           </a>

@@ -1,1 +1,9 @@
 @use "./../util/colors.scss" as *;
+
+.conatiner {
+  .section-wrapper {
+    // add animate to each section
+    height: 200px;
+    width: 100vw;
+  }
+}

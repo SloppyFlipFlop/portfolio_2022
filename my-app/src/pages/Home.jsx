@@ -1,17 +1,13 @@
 import React from "react";
-import Navbar from "../components/Navbar";
 import "./../styles/pages/Home.scss";
 
 const Home = () => {
   return (
-    <div>
-      <Navbar />
-      <body className="we">
-        <div id="home">Home</div>
+    <body className="container">
+      <div className="section-wrapper" id="home">Home</div>
 
-        <div id="about">About</div>
-      </body>
-    </div>
+      <div className="section-wrapper" id="about">About</div>
+    </body>
   );
 };
 

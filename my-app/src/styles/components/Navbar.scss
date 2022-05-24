@@ -4,6 +4,7 @@
 
 @media screen and (max-width: 768px) {
   .navbar-container {
+
     .menu_icons {
       // makes the hamburger menu visible on mobile
       display: block;
@@ -21,7 +22,7 @@
       }
       .close {
         // transition: background 1s;
-        background: $blue;
+        background: $action;
         // make icon into a circle
         border-radius: 50%;
         color: $white;
@@ -35,10 +36,15 @@
 
     .hide {
       transition: 1s;
-      transform: translateX(-100%);
+      transform: translateX(-110%);
     }
 
     ul {
+      position: fixed;
+
+
+      background: $white;
+
       width: 65vw;
       height: 100vh;
       border-right: 1px solid #e6e9ec;
@@ -55,10 +61,14 @@
         width: 90%;
         display: flex;
 
+        &:focus {
+          background: $action;
+        }
+
         .wrapper {
           text-decoration: none;
           display: flex;
-          background: #f2f3f5;
+          background: $smoke-white;
           border-radius: 1rem;
           padding: 1rem;
           width: 100%;
@@ -126,7 +136,7 @@
         width: 2rem;
         border-radius: 2rem;
         padding: 0.5rem;
-        background: $white;
+        background: $smoke-white;
         text-decoration: none;
 
         .icon {
@@ -160,7 +170,7 @@
       align-items: center;
       align-content: center;
       flex-direction: row;
-      background: $blue;
+      background: $action;
       .name {
         // transition: 1s;
         // opacity: 1;
