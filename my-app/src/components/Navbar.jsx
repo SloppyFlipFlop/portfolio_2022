@@ -31,31 +31,31 @@ const Navbar = () => {
         )}
       </div>
       <ul className={`desktop ${navbarOpened ? "show" : "hide"}`}>
-        <li>
+        <li onClick={() => setNavbarOpened(!navbarOpened)}>
           <a href="#home" className="wrapper">
             <AiOutlineHome className="icon" />
             <div className="name">Home</div>
           </a>
         </li>
-        <li>
+        <li onClick={() => setNavbarOpened(!navbarOpened)}>
           <a href="#about" className="wrapper">
             <AiOutlineUser className="icon" />
             <div className="name">About</div>
           </a>
         </li>
-        <li>
+        <li onClick={() => setNavbarOpened(!navbarOpened)}>
           <a href="#resume" className="wrapper">
             <AiOutlineFileText className="icon" />
             <div className="name">Resume</div>
           </a>
         </li>
-        <li>
+        <li onClick={() => setNavbarOpened(!navbarOpened)}>
           <a href="#projects" className="wrapper">
             <FiServer className="icon" />
             <div className="name">Projects</div>
           </a>
         </li>
-        <li>
+        <li onClick={() => setNavbarOpened(!navbarOpened)}>
           <a href="#contact" className="wrapper">
             <AiOutlineMail className="icon" />
             <div className="name">Contact</div>
