@@ -4,20 +4,20 @@
 
 @media screen and (max-width: 768px) {
   .navbar-container {
-
     .menu_icons {
       // makes the hamburger menu visible on mobile
       display: block;
       // hamburger position
       position: fixed;
       top: 1rem;
-      right: 1rem;
+      right: 0.5rem;
       // hamburger size
       font-size: 28px;
 
       z-index: 1;
-      transition: 1.5s;
+      // transition: all 1.5s;
       * {
+        transition: all 1s;
         padding: 0.5rem;
       }
       .close {
@@ -41,7 +41,6 @@
 
     ul {
       position: fixed;
-
 
       background: $white;
 

@@ -1,13 +1,39 @@
 import React from "react";
+
+// import "./../utils/js/customAnimations.js";
+// import "./../utils/scss/customAnimations.scss";
 import "./../styles/pages/Home.scss";
-
-import landingImage from "./../styles/util/images/landing-image.jpg";
-
+import landing from "./../styles/util/images/landing-image.jpg";
 const Home = () => {
+  const sections = document.querySelectorAll(".section-conatiner");
+
+  // console.log(sections);
+
+  const fadeInOptions = {
+    root: null, // it is the viewport
+    threshold: 1,
+    rootMargin: "0px 0px 50px 0px",
+  };
+
+  // make a new observer
+  const fadeInOnScroll = new IntersectionObserver((entries, fadeInOnScroll) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) {
+        return;
+      }
+      entry.target.classList.toggle("appear");
+      fadeInOnScroll.unobserve(entry.target);
+    });
+  }, fadeInOptions);
+
+  sections.forEach((section) => {
+    fadeInOnScroll.observe(section);
+  });
+
   return (
-    <body className="container">
+    <div className="container">
       <div className="section-conatiner" id="home">
-        <img src={landingImage} alt="David's portfilo landing image" />
+        <img src={landing} alt="Landscape" />
         <div className="text-wrapper">
           <h1>David's Portfolio</h1>
         </div>
@@ -18,8 +44,6 @@ const Home = () => {
           <h1 className="text-wrapper">About Me</h1>
           <div className="underline"></div>
         </div>
-
-        
       </div>
 
       <div className="section-conatiner" id="resume">
@@ -42,7 +66,8 @@ const Home = () => {
           <div className="underline"></div>
         </div>
       </div>
-    </body>
+      {/* <script src="./../utils/js/customAnimations.js"></script> */}
+    </div>
   );
 };
 
