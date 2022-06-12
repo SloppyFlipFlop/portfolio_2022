@@ -17,15 +17,15 @@ const Navbar = () => {
 
   return (
     <div className="navbar-container">
-      <div className="menu_icons">
+      <div className={`menu_icons ${navbarOpened ? "open" : "close"}`}>
         {navbarOpened ? (
           <AiOutlineClose
-            className="close"
+            className="icon"
             onClick={() => setNavbarOpened(!navbarOpened)}
           />
         ) : (
           <GiHamburgerMenu
-            className="hamburger"
+            className="icon"
             onClick={() => setNavbarOpened(!navbarOpened)}
           />
         )}

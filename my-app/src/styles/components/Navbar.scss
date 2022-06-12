@@ -6,7 +6,7 @@
   .navbar-container {
     .menu_icons {
       // makes the hamburger menu visible on mobile
-      display: block;
+      // display: block;
       // hamburger position
       position: fixed;
       top: 1rem;
@@ -14,19 +14,29 @@
       // hamburger size
       font-size: 28px;
 
+      transition: 300ms;
+
       z-index: 1;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
       // transition: all 1.5s;
-      * {
+      .icon {
         transition: all 1s;
         padding: 0.5rem;
       }
-      .close {
-        // transition: background 1s;
-        background: $action;
-        // make icon into a circle
-        border-radius: 50%;
-        color: $white;
-      }
+    }
+
+    .open {
+      // transition: background 1s;
+      background: $action;
+
+      color: $white;
+      border-radius: 3rem;
+      // height: fit-content;
+      // width: fit-content;
     }
 
     .show {
