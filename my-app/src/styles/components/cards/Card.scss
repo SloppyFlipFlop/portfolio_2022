@@ -1,0 +1,51 @@
+@use "./../../util/colors.scss" as *;
+
+.section-conatiner {
+  opacity: 0;
+  transform: translateY(10rem);
+  transition: all 1s;
+
+  .title-container {
+    .text-wrapper {
+      text-align: center;
+      width: 100%;
+      color: $action;
+    }
+
+    .underline {
+      height: 0.25rem;
+      background: $underline;
+      width: 25%;
+
+      // center the underline
+      margin: 0.2rem auto 0 auto;
+
+      &::before {
+        content: "";
+        display: block;
+        width: 10%;
+        height: 0.25rem;
+        background: $smoke-white;
+        position: absolute;
+
+        left: 30%;
+        // z-index: -1;
+      }
+      &::after {
+        content: "";
+        display: block;
+        width: 10%;
+        height: 0.25rem;
+        background: $smoke-white;
+        position: absolute;
+
+        left: 60%;
+      }
+    }
+  }
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}

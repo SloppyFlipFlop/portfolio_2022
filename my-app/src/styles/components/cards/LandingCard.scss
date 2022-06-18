@@ -1,0 +1,26 @@
+@use "./../../util/colors.scss" as *;
+
+#home {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 1s;
+  // add animate to each section
+  img {
+    // make the image cover the entire screen
+    width: 100vw;
+    height: 100vh;
+    background: cover;
+    opacity: 0.6;
+  }
+
+  .text-wrapper {
+    // center the text in the middle of the screen
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    color: $black;
+  }
+}
